@@ -1,0 +1,9 @@
+## IDEs
+/.vscode
+/.idea
+
+## Temp files
+/.venv
+/temp
+/tmp
+vendor
