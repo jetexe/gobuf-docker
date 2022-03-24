@@ -38,7 +38,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/arm64/v8,linux/s390x
+          platforms: linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/s390x
           tags: |
             jetexe/gobuf:${{ steps.slug.outputs.version-major }}.${{ steps.slug.outputs.version-minor }}.${{ steps.slug.outputs.version-patch }}
             jetexe/gobuf:${{ steps.slug.outputs.version-major }}.${{ steps.slug.outputs.version-minor }}
