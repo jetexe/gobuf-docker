@@ -1,16 +1,14 @@
 FROM golang:1.18.0-alpine3.15 as builder
 
-WORKDIR /work
-
-COPY ./ ./
+ENV PROTOC_GO=v1.28.0
+ENV PROTOC_GO_GRPC=v1.2.0
 
 RUN set -x \
- && go mod vendor \
- && go install ./vendor/google.golang.org/protobuf/cmd/protoc-gen-go \
- && go install ./vendor/google.golang.org/grpc/cmd/protoc-gen-go-grpc
+ && go install google.golang.org/protobuf/cmd/protoc-gen-go@$PROTOC_GO \
+ && go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@$PROTOC_GO_GRPC
 
 FROM bufbuild/buf:1.1.1
 
-RUN mkdir /.cache && chmod 755 /.cache
+RUN mkdir /.cache && chmod 777 /.cache
 
 COPY --from=builder /go/bin /usr/bin
