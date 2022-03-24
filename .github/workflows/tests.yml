@@ -53,7 +53,7 @@ jobs:
         with:
           image: localhost:5000/app:local
           fail-build: false
-          debug: true
+          debug: true # Todo: remove later
           acs-report-enable: true
           severity-cutoff: low # negligible, low, medium, high or critical
 
