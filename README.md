@@ -6,7 +6,7 @@
 
 Docker image [bufbuild/buf][link.buf] with `protoc-gen-go` and `protoc-gen-go-grpc` extensions.
 
-More information you can finde [here][link.buf]
+More information you can find [here][link.buf]
 
 [badge.docker]:https://img.shields.io/docker/pulls/jetexe/gobuf.svg
 
