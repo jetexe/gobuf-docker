@@ -12,3 +12,5 @@ FROM bufbuild/buf:1.3.1
 RUN mkdir /.cache && chmod 777 /.cache
 
 COPY --from=builder /go/bin /usr/bin
+
+LABEL org.opencontainers.image.source = "https://github.com/jetexe/gobuf-docker"

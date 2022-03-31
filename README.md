@@ -14,6 +14,6 @@ More information you can find [here][link.buf]
 
 [badges.release]: https://github.com/jetexe/gobuf-docker/releases
 
-[link.docker]:https://hub.docker.com/r/jetexe/gobuf%
+[link.docker]:https://hub.docker.com/r/jetexe/gobuf
 
 [link.buf]:https://github.com/bufbuild/buf
