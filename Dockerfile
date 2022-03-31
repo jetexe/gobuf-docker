@@ -13,4 +13,4 @@ RUN mkdir /.cache && chmod 777 /.cache
 
 COPY --from=builder /go/bin /usr/bin
 
-LABEL org.opencontainers.image.source = "https://github.com/jetexe/gobuf-docker"
+LABEL org.opencontainers.image.source="https://github.com/jetexe/gobuf-docker"
