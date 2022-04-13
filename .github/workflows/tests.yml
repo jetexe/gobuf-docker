@@ -54,7 +54,7 @@ jobs:
           image: localhost:5000/app:local
           fail-build: true
           acs-report-enable: true
-          severity-cutoff: low # negligible, low, medium, high or critical
+          severity-cutoff: high # negligible, low, medium, high or critical
 
       - name: upload Anchore scan SARIF report
         if: ${{ always() }}
