@@ -53,6 +53,7 @@ jobs:
         with:
           image: localhost:5000/app:local
           acs-report-enable: true
+          fail-build: false
 
       - name: upload Anchore scan SARIF report
         if: ${{ always() }}
