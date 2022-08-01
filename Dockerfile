@@ -1,4 +1,4 @@
-FROM golang:1.18.4-alpine3.15 as builder
+FROM golang:1.18.5-alpine3.15 as builder
 
 ENV PROTOC_GO=v1.28.0
 ENV PROTOC_GO_GRPC=v1.2.0
