@@ -1,7 +1,7 @@
 FROM golang:1.20.1-alpine3.16 as builder
 
 ENV PROTOC_GO=v1.28.1
-ENV PROTOC_GO_GRPC=v1.2.0
+ENV PROTOC_GO_GRPC=v1.3.0
 
 RUN set -x \
  && go install google.golang.org/protobuf/cmd/protoc-gen-go@$PROTOC_GO \
