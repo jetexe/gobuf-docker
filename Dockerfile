@@ -1,6 +1,6 @@
 FROM golang:1.20.4-alpine3.16 as builder
 
-ENV PROTOC_GO=v1.35.2
+ENV PROTOC_GO=v1.36.0
 ENV PROTOC_GO_GRPC=v1.5.1
 
 RUN set -x \
