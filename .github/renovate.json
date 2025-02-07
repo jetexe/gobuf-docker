@@ -1,34 +1,25 @@
 {
-  "labels": [
-    "update:deps"
-  ],
-  "assignees": [
-    "jetexe"
-  ],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":disableDependencyDashboard"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": [
-        "^Dockerfile$"
-      ],
-      "matchStrings": [
-        "ENV PROTOC_GO=(?<currentValue>.*?)\n"
-      ],
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ENV PROTOC_GO=(?<currentValue>.*?)\n"],
       "depNameTemplate": "google.golang.org/protobuf",
       "datasourceTemplate": "go"
     },
     {
-      "fileMatch": [
-        "^Dockerfile$"
-      ],
-      "matchStrings": [
-        "ENV PROTOC_GO_GRPC=(?<currentValue>.*?)\n"
-      ],
+      "customType": "regex",
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ENV PROTOC_GO_GRPC=(?<currentValue>.*?)\n"],
       "depNameTemplate": "google.golang.org/grpc/cmd/protoc-gen-go-grpc",
       "datasourceTemplate": "go"
     }
-  ]
+  ],
+  "assignees": ["jetexe"],
+  "labels": ["update:deps"]
 }
