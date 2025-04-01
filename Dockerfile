@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM docker.io/library/golang:1.24.1-alpine3.21 AS builder
+FROM docker.io/library/golang:1.24.2-alpine3.21 AS builder
 
 ENV PROTOC_GO=v1.36.6
 ENV PROTOC_GO_GRPC=v1.5.1
