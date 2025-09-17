@@ -9,7 +9,7 @@ RUN set -x \
  && go install google.golang.org/protobuf/cmd/protoc-gen-go@$PROTOC_GO \
  && go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@$PROTOC_GO_GRPC
 
-FROM docker.io/bufbuild/buf:1.56.0
+FROM docker.io/bufbuild/buf:1.57.2
 
 RUN mkdir /.cache && chmod 777 /.cache
 
