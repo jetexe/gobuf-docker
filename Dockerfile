@@ -2,7 +2,7 @@
 
 FROM docker.io/library/golang:1.25.1-alpine3.21 AS builder
 
-ENV PROTOC_GO=v1.36.9
+ENV PROTOC_GO=v1.36.10
 ENV PROTOC_GO_GRPC=v1.5.1
 
 RUN set -x \
