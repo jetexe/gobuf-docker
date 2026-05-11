@@ -3,7 +3,7 @@
 FROM docker.io/library/golang:1.25.5-alpine3.21 AS builder
 
 ENV PROTOC_GO=v1.36.10
-ENV PROTOC_GO_GRPC=v1.6.0
+ENV PROTOC_GO_GRPC=v1.6.2
 
 RUN set -x \
  && go install google.golang.org/protobuf/cmd/protoc-gen-go@$PROTOC_GO \
